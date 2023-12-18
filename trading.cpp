@@ -154,11 +154,11 @@ template<typename Y> void Strategy<Y> :: highOrLow() {
 template<typename Y> void Strategy<Y> :: priceHistory() {
     cout << "------TIME---------ROLLING---------HIGHS---------LOWS------TREND------\n";
     for (int i = 0; i < rollingPrice.size(); i++) {
-        cout << "    " << this->getTime(); 
-        cout << "      " << setprecision(2) << fixed << rollingPrice[i]; 
-        cout << "\t     " << setprecision(2) << fixed << highs[i]; 
-        cout << "\t       " << setprecision(2) << fixed << lows[i];  
-        cout  << "\t " << this->getTrend() << endl;  
+        cout << setw(12) << this->getTime(); 
+        cout << setw(14) << setprecision(2) << fixed << rollingPrice[i]; 
+        cout << setw(14) << setprecision(2) << fixed << highs[i]; 
+        cout << setw(13) << setprecision(2) << fixed << lows[i];  
+        cout  << setw(9) << this->getTrend() << endl;  
     }
     cout << "----------------------------------------------------------------------\n";
     return;
